@@ -8,15 +8,33 @@
     */
 
     // Entrada de Dados
+ const numero1 = prompt("Digite o primeiro número:");
+    const numero2 = prompt("Digite o segundo número:");
+    const operacao = prompt("Qual operação você deseja realizar? Digite 'soma', 'subtracao', 'multiplicacao' ou 'divisao':");
 
+   let resultado;
 
+   // Processamento
+if (operacao === 'soma') {
+    resultado = Number(numero1) + Number(numero2);
+} else if (operacao === 'subtracao') {
+    resultado = Number(numero1) - Number(numero2);
+} else if (operacao === 'multiplicacao') {
+    resultado = Number(numero1) * Number(numero2);
+} else if (operacao === 'divisao') {
+    if (Number(numero2) === 0) {
+        alert("Não é possível dividir por zero.");
+    } else {
+        resultado = Number(numero1) / Number(numero2);
+    }
+} else {
+    alert("Operação inválida.");
+}
 
-    // Processamento
-
-
-
-    // Saída de Dados
-    
+ // Saída de Dados
+if (resultado !== undefined) {
+    alert(`O resultado da operação ${operacao} é ${resultado}.`);
+}    
 
 
 </script>
